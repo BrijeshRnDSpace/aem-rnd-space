@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="sling:OsgiConfig"
+          blog.name="Email Blogs direct from Configurations"
+          blog.URL="www2.HPComm.com/nakepurechale"
+          blog.Topics="OSGI in AEM Services"
+          blogCount="{Long}123"
+          password="Restricted"
+          blogIsActive="true"
+          hostedAt="Blogging website"
+/>

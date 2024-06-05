@@ -1,0 +1,1 @@
+package com.adobe.aem.guides.rnd.core.services;public interface SampleService {    String getRandomActivity();}
