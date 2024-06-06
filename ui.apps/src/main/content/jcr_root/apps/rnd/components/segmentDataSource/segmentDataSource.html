@@ -1,0 +1,8 @@
+<div data-sly-use.datasource="com.adobe.aem.guides.rnd.core.models.SegmentDataSourceModel"
+     data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+     data-sly-test.hasContent="${!datasource.empty}"
+     class="cmp-segmentdata">
+    <h2 class="cmp-name">Name Is here : ${datasource.name}</h2>
+    <h2 class="cmp-segmentTag">SegmentTag Is here : ${datasource.segmentTags}</h2>
+    </div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>
