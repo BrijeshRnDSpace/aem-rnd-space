@@ -1,13 +1,9 @@
 package com.adobe.aem.guides.rnd.core.models;
 
-
-import java.util.List;
-
-public interface Byline {
-
+public interface SegmentDataSourceModel {
     String getName();
 
-    List<String> getOccupations();
+    String getSegmentTags();
 
     boolean isEmpty();
 }

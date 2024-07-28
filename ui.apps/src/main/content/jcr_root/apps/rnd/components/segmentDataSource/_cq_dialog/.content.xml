@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
           xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
           jcr:primaryType="nt:unstructured"
-          jcr:title="Byline"
+          jcr:title="Segment Data Source Custom"
           sling:resourceType="cq/gui/components/authoring/dialog">
     <content
             jcr:primaryType="nt:unstructured"
@@ -13,12 +13,6 @@
                     sling:resourceType="granite/ui/components/coral/foundation/tabs"
                     maximized="{Boolean}false">
                 <items jcr:primaryType="nt:unstructured">
-                    <asset
-                            jcr:primaryType="nt:unstructured"
-                            sling:hideResource="{Boolean}false"/>
-                    <metadata
-                            jcr:primaryType="nt:unstructured"
-                            sling:hideResource="{Boolean}true"/>
                     <properties
                             jcr:primaryType="nt:unstructured"
                             jcr:title="Properties"
@@ -42,19 +36,17 @@
                                                     fieldLabel="Name"
                                                     name="./name"
                                                     required="{Boolean}true"/>
-                                            <occupations
+                                            <predefinedUrl
                                                     jcr:primaryType="nt:unstructured"
-                                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
-                                                    fieldDescription="A list of the contributor's occupations."
-                                                    fieldLabel="Occupations"
-                                                    required="{Boolean}false">
-                                                <field
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    name="./segmentTags"
+                                                    source="Segment Tags"
+                                                    fieldLabel="Segment Tags"
+                                                    emptyText="Select predefined segment tags">
+                                                <datasource
                                                         jcr:primaryType="nt:unstructured"
-                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                                        emptyText="Enter an occupation"
-                                                        name="./occupations"/>
-                                            </occupations>
-
+                                                        sling:resourceType="email/components/datasource/tags"/>
+                                            </predefinedUrl>
                                         </items>
                                     </column>
                                 </items>

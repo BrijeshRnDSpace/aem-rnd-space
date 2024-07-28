@@ -21,7 +21,11 @@ import java.io.IOException;
 /**
  * Servlet that writes some sample content into the response. It is mounted for * all resources of a specific Sling resource type. The * {@link SlingSafeMethodsServlet} shall be used for HTTP methods that are * idempotent. For write operations use the {@link SlingAllMethodsServlet}.
  */
-@Component(service = {Servlet.class}, property = {ServletResolverConstants.SLING_SERVLET_RESOURCE_TYPES + "=" + "/apps/rnd/components/page", ServletResolverConstants.SLING_SERVLET_METHODS + "=" + HttpConstants.METHOD_GET, ServletResolverConstants.SLING_SERVLET_EXTENSIONS + "=mata"})
+@Component(service = {Servlet.class},
+            property = {
+                        ServletResolverConstants.SLING_SERVLET_RESOURCE_TYPES + "=" + "/apps/rnd/components/page",
+                        ServletResolverConstants.SLING_SERVLET_METHODS + "=" + HttpConstants.METHOD_GET,
+                    ServletResolverConstants.SLING_SERVLET_EXTENSIONS + "=mata"})
 @ServiceDescription("Simple ResourceType RS type Servlet")
 public class SimpleServlet extends SlingSafeMethodsServlet {
     private static final long serialVersionUID = 1L;
