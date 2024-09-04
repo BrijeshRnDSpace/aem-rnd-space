@@ -1,1 +1,5 @@
-package com.adobe.aem.guides.rnd.core.services;public interface AzureServiceBusUploaderService {    String processPayloadUpload(final String haalFile);}
+package com.adobe.aem.guides.rnd.core.services;
+
+public interface AzureServiceBusUploaderService {
+    String processPayloadUpload(final String haalFile);
+}

@@ -17,7 +17,11 @@ import javax.servlet.Servlet;
 import javax.servlet.ServletException;
 import java.io.IOException;
 
-@Component(service = {Servlet.class}, property = {ServletResolverConstants.SLING_SERVLET_PATHS + "=" + ServiceCallingServlet.SERVLET_PATH, ServletResolverConstants.SLING_SERVLET_METHODS + "=" + HttpConstants.METHOD_GET, ServletResolverConstants.SLING_SERVLET_EXTENSIONS + "=notext"})
+@Component(service = {Servlet.class},
+        property = {
+                    ServletResolverConstants.SLING_SERVLET_PATHS + "=" + ServiceCallingServlet.SERVLET_PATH,
+                    ServletResolverConstants.SLING_SERVLET_METHODS + "=" + HttpConstants.METHOD_GET,
+                    ServletResolverConstants.SLING_SERVLET_EXTENSIONS + "=notext"})
 @ServiceDescription("Simple Demo Servlet")
 public class ServiceCallingServlet extends SlingSafeMethodsServlet {
     private static final long serialVersionUID = 1L;

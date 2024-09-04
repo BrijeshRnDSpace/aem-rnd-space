@@ -18,7 +18,11 @@ import java.io.IOException;
 /**
  * Servlet that writes some sample content into the response. It is mounted for * all resources of a specific Sling resource type. The * {@link SlingSafeMethodsServlet} shall be used for HTTP methods that are * idempotent. For write operations use the {@link SlingAllMethodsServlet}.
  */
-@Component(service = {Servlet.class}, property = {ServletResolverConstants.SLING_SERVLET_PATHS + "=" + SimpleServletByPath.SERVLET_PATH, ServletResolverConstants.SLING_SERVLET_METHODS + "=" + HttpConstants.METHOD_GET, ServletResolverConstants.SLING_SERVLET_EXTENSIONS + "=txt"})
+@Component(service = {Servlet.class},
+           property = {
+                        ServletResolverConstants.SLING_SERVLET_PATHS + "=" + SimpleServletByPath.SERVLET_PATH,
+                        ServletResolverConstants.SLING_SERVLET_METHODS + "=" + HttpConstants.METHOD_GET,
+                        ServletResolverConstants.SLING_SERVLET_EXTENSIONS + "=txt"})
 @ServiceDescription("Simple Demo Servlet")
 public class SimpleServletByPath extends SlingSafeMethodsServlet {
     private static final long serialVersionUID = 1L;
