@@ -15,7 +15,11 @@ import javax.servlet.Servlet;
 import javax.servlet.ServletException;
 import java.io.IOException;
 
-@Component(service = {Servlet.class}, property = {ServletResolverConstants.SLING_SERVLET_PATHS + "=" + AzureServlet.SERVLET_PATH, ServletResolverConstants.SLING_SERVLET_METHODS + "=" + HttpConstants.METHOD_GET, ServletResolverConstants.SLING_SERVLET_EXTENSIONS + "=txt"})
+@Component(service = {Servlet.class},
+          property = {
+                        ServletResolverConstants.SLING_SERVLET_PATHS + "=" + AzureServlet.SERVLET_PATH,
+                        ServletResolverConstants.SLING_SERVLET_METHODS + "=" + HttpConstants.METHOD_GET,
+                        ServletResolverConstants.SLING_SERVLET_EXTENSIONS + "=txt"})
 @ServiceDescription("Simple Demo Servlet")
 public class AzureServlet extends SlingSafeMethodsServlet {
     private static final long serialVersionUID = 1L;
